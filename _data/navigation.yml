@@ -13,7 +13,7 @@ main:
     url: /Portfolio/    
 
   - title: "科研项目"
-    url: /posts/    
+    url: /year-archive/    
     
   - title: "团队介绍"
     url: /team/
