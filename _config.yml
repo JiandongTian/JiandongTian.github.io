@@ -188,7 +188,7 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-
+sitemap: false
 # Defaults
 defaults:
   # _posts
