@@ -10,7 +10,7 @@ main:
     url: /publications/
 
   - title: "应用成果"
-    url: /Portfolio/    
+    url: /portfolio/    
 
   - title: "科研项目"
     url: /year-archive/    
@@ -18,3 +18,6 @@ main:
   - title: "团队介绍"
     url: /talks/
 
+
+
+    
