@@ -2,6 +2,7 @@
 permalink: /
 title: "田建东的个人主页"
 excerpt: "About me"
+sitemap: false
 author_profile: true
 redirect_from: 
   - /about/
