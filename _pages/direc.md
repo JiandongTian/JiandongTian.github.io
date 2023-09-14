@@ -1,6 +1,6 @@
 ---
 layout: archive
-title:      
+title: &emsp     
 permalink: /direc/
 author_profile: true
 ---
