@@ -35,7 +35,7 @@ author_profile: true
 研究进入相机的光线经过光电转换后得到的 Raw 数据（图3）以及后续处理的过程（图4），包括解马赛克、相机颜色空间到 sRGB 空间的转换、伽马校正、白平衡、色调映射、色域映射等，仿真计算结果见图5。在此基础上，还提出了相机相机响应曲线估计方法，结果见图6。
 
 
-<div height = 320 width = 510 align = center><img src='/images/pub_img3.png'></div>\
+<div align = center><img src='/images/pub_img3.png' width = "60%" ></div>\
 图3. Raw图像成像过程
 
 
