@@ -1,11 +1,15 @@
 ---
-permalink: /
-title: "田建东的论文"
-excerpt: "publication"
+# permalink: /publications/
+# title: "田建东的论文"
+# excerpt: "publication"
+# author_profile: true
+# redirect_from: 
+#   - /pub/
+#   - /pub.html
+layout: archive
+title: "Publications"
+permalink: /publications/
 author_profile: true
-redirect_from: 
-  - /pub/
-  - /pub.html
 ---
 
 本页内容在_pages/pub.md文件内。
