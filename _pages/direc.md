@@ -12,14 +12,12 @@ permalink: /direc/
 author_profile: true
 ---
 
-本页内容在_pages/direc.md文件内。
-今天是9.14
-test1
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+研究背景
+======
+复杂光照和恶劣天气下的机器人视觉及环境感知是机器人学科中的一个瓶颈问题，室外场景存在光照、天气或季节等复杂多变的环境因素,不同的光照条件、不同的气象条件甚至不同的时间（早晨、上午、下午、傍晚）都会造成图像的巨大差异，严重降低了机器人视觉及环境感知算法的稳定性。
+
+图像是视觉算法的基础，光照和天气的变化改变了图像的像素值分布（如图1-b和1-c对比所示），这影响了机器人视觉算法的根基，进而影响了机器人的一些基本能力如SLAM、避障导航、视觉伺服、环境理解及作业，给机器人环境感知与行为决策带来了巨大的挑战。目前视觉算法大多是针对质量好、光照条件稳定图像（如图1-c所示）开发的。实际上，在室外复杂的自然光照与恶劣气象条件下，图像质量差别很大（如图1-b所示）。这种情况下，机器人视觉系统的表现往往差强人意，缺乏对环境的自适应能力及鲁棒性，因此针对该问题的图像预处理（图1-b到图1-c）对机器人视觉非常重要。
 
 Getting started
 ======
