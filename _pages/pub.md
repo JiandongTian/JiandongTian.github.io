@@ -12,16 +12,43 @@ permalink: /pub/
 author_profile: true
 ---
 
-本页内容在_pages/pub.md文件内。
-今天是9.14
-test1
-A data-driven personal website
+1. 大气辐射传输、场景反射、相机成像建模
 ======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+室外环境下，太阳发出的光线经过地球的大气层会受到大气吸收、反射、和散射等影响，导致到达地面的光照会随着时间和大气因素而变化，进而导致室外场景图像的复杂性和多样性。大气物理领域的研究表明**至少20多个参数**会影响光照和天气的变化，但这些参数对于机器人的应用来说**难以获得**。为解决该问题，团队提出了适于机器人视觉成像计算的大气辐射光谱计算方法。我们的方法只需两个参数：天顶角（可根据机器人GPS坐标及时间信息计算）及气溶胶指数（我们在论文中给出了利用图像中阴影强度来计算该参数的方法，在某些具体应用中也可根据天气预报或空气污染指数获得），在参数减少了90%的情况下仍能保持计算精度，详见表1与图1。
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+表1. 我们方法与大气物理中两种经典计算方法（Bird和SMART32）的计算复杂度对比。我们方法只需2个参数和简单计算，经典大气物理方法需要20多个参数和复杂计算，且这20多个参数对于机器人的应用来说难以获得。
+<img src='/images/pub_data1.png'>
 
-Getting started
+图1. 地表大气辐照度计算结果，左侧为太阳直射光，右侧为天空散射光。第一排为我们方法与大气物理两种经典计算方法（Bird和SMART32）的对比结果。结果表明我们方法（只需2个参数，经过简单计算）可以非常逼近大气物理经典方法（需要20多个参数，经过复杂计算）的计算结果。第二排为我们计算方法和光谱仪实测数据的对比（红色为真实值）。结果表明我们的计算结果非常接近实测结果，可确保用于机器人视觉。
+<img src='/images/pub_img1.png'>
+
+
+2. 场景反射光谱重建
+======
+我们的贡献在于提出了相机/人眼响应光谱加权控制反射光谱重建精度，使得相机/人眼响应高的谱段重建精度更高。图2是4个色块的反射率光谱重建结果，其中红色表示真实光谱，绿色表示我们计算得到的光谱, 蓝色表示经典PCA方法得到结果，黑色代表颜色匹配函数三通道的和。横坐标代表波长，纵坐标代表反射率。从结果上看，我们方法在颜色匹配函数（对应于相机的色彩响应曲线）的峰值处的精度远高于PCA方法的精度，这样非常利于提高利用此反射曲线进行成像计算的精度，统计结果表明我们方法得到反射光谱的成像精度比主流方法提高了50%。
+
+图2. 2个代表性色块的反射光谱重建结果
+<img src='/images/pub_img2.png'>
+
+3. 相机成像建模与仿真
+======
+研究进入相机的光线经过光电转换后得到的 Raw 数据（图3）以及后续处理的过程（图4），包括解马赛克、相机颜色空间到 sRGB 空间的转换、伽马校正、白平衡、色调映射、色域映射等，仿真计算结果见图5。在此基础上，还提出了相机相机响应曲线估计方法，结果见图6。
+
+图3. Raw图像成像过程
+<img src='/images/pub_img3.png'>
+
+图4. 彩色图像形成及过程
+<img src='/images/pub_img4.png'>
+
+图5. 左边：Cannon相机的RAW图像和sRGB图像；中间：XCC SG光谱反射率采样；右边：NIKON相机的RAW图像和sRGB图像
+<img src='/images/pub_img5.png'>
+
+同时为了验证本文的方法在不同光照条件的有效性，分别在不同的光照条件下进行了实验：晴天、阴天、蓝天及灯光。计算结果如图2-7所示，其中第一行是佳能5D Mark II的计算结果，第二行是Nikon D100的计算结果。
+
+图6. 不同光照下相机的光谱响应曲线
+<img src='/images/pub_img6.png'>
+
+<!-- Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
 1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
@@ -52,4 +79,4 @@ Example: editing a markdown file for a talk
 
 For more info
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
