@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: /
+title:
 permalink: /direc/
 author_profile: true
 ---
