@@ -1,6 +1,6 @@
 ---
 layout: archive
-# title: &ensp     
+title: Directions    
 permalink: /direc/
 author_profile: true
 ---
