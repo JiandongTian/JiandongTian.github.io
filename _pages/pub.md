@@ -14,24 +14,26 @@ author_profile: true
 
 1.大气辐射传输、场景反射、相机成像建模
 ======
+(1)大气辐射光谱计算方法
+------
 室外环境下，太阳发出的光线经过地球的大气层会受到大气吸收、反射、和散射等影响，导致到达地面的光照会随着时间和大气因素而变化，进而导致室外场景图像的复杂性和多样性。大气物理领域的研究表明**至少20多个参数**会影响光照和天气的变化，但这些参数对于机器人的应用来说**难以获得**。为解决该问题，团队提出了适于机器人视觉成像计算的大气辐射光谱计算方法。我们的方法只需两个参数：天顶角（可根据机器人GPS坐标及时间信息计算）及气溶胶指数（我们在论文中给出了利用图像中阴影强度来计算该参数的方法，在某些具体应用中也可根据天气预报或空气污染指数获得），在参数减少了90%的情况下仍能保持计算精度，详见表1与图1。
 
 <div align = center><img src='/images/pub_sheet1.png'></div>
 表1. 我们方法与大气物理中两种经典计算方法（Bird和SMART32）的计算复杂度对比。我们方法只需2个参数和简单计算，经典大气物理方法需要20多个参数和复杂计算，且这20多个参数对于机器人的应用来说难以获得。
 
-<div align = center><img src='/images/pub_img1.png'></div>\
+<div align = center><img src='/images/pub_img1.png' width = "80%"></div>\
 图1. 地表大气辐照度计算结果，左侧为太阳直射光，右侧为天空散射光。第一排为我们方法与大气物理两种经典计算方法（Bird和SMART32）的对比结果。结果表明我们方法（只需2个参数，经过简单计算）可以非常逼近大气物理经典方法（需要20多个参数，经过复杂计算）的计算结果。第二排为我们计算方法和光谱仪实测数据的对比（红色为真实值）。结果表明我们的计算结果非常接近实测结果，可确保用于机器人视觉。
 
-2.场景反射光谱重建
-======
+(2)场景反射光谱重建
+------
 我们的贡献在于提出了相机/人眼响应光谱加权控制反射光谱重建精度，使得相机/人眼响应高的谱段重建精度更高。图2是4个色块的反射率光谱重建结果，其中红色表示真实光谱，绿色表示我们计算得到的光谱, 蓝色表示经典PCA方法得到结果，黑色代表颜色匹配函数三通道的和。横坐标代表波长，纵坐标代表反射率。从结果上看，我们方法在颜色匹配函数（对应于相机的色彩响应曲线）的峰值处的精度远高于PCA方法的精度，这样非常利于提高利用此反射曲线进行成像计算的精度，统计结果表明我们方法得到反射光谱的成像精度比主流方法提高了50%。
 
 
 <div align = center><img src='/images/pub_img2.png'></div>\
 图2. 2个代表性色块的反射光谱重建结果
 
-3.相机成像建模与仿真
-======
+(3)相机成像建模与仿真
+------
 研究进入相机的光线经过光电转换后得到的 Raw 数据（图3）以及后续处理的过程（图4），包括解马赛克、相机颜色空间到 sRGB 空间的转换、伽马校正、白平衡、色调映射、色域映射等，仿真计算结果见图5。在此基础上，还提出了相机相机响应曲线估计方法，结果见图6。
 
 
@@ -60,6 +62,24 @@ author_profile: true
 
 [4] Denglu Wu，Jiandong Tian*，Bingfeng Li, Yandong Tang,"Recovering Sensor Spectral Sensitivity from Raw Data", Journal of Electronic Imaging Vol. 22, No 2, pp: 023-032, 2013.
 
+
+
+复杂光照下图像处理的理论模型及算法
+======
+结合大气物理与成像光学，我们在早期工作中提出了图像中阴影的三色衰减模型（Tricolor Attenuation Model, TAM）和光照线性模型（Illumination Linearity Model），它们分别描述了图像中阴影和非阴影背景之间的三通道衰减以及线性比率关系。在理论上证明了该模型的参数不依赖于物体的反射曲线，即不管场景多复杂，被阴影覆盖的不同物体同其周围的非阴影区域的像素比值是定值，并且证明了该值由太阳角度（天顶角）唯一确定。
+
+<div align = center><img src='/images/pub_img7.png'></div>\
+
+我们进一步计算了不同太阳角度和不同气象条件下（气溶胶）下的太阳辐射光谱和天空辐射光谱，根据室外阴影只受天空光照射的特点，提出了光谱比率理论（Spectrum Ratio），总结了不同太阳角度和天气下光谱比率的共同点，据此发现了四个新的阴影物理特征，适用于不同天气下的光照处理，揭示了图像中光照变化特征与太阳角度的关系。在我们三色衰减模型、线性模型和光谱比率理论等前述工作的基础上，团队历时2年采集了不同光照条件、不同反照率、不同场景、不同季节、不同时间段、和不同太阳光角度下的3088对有阴影/无阴影图像，建立了首个，也是迄今为止最大、最丰富的光照处理数据库（SRD），首次将光照物理特性（线性模型与光谱比率理论）与深度学习工具相结合，提出了图像去阴影深度网络Deshadownet，并提出了大规模数据库下阴影去除的基本评价准则（Evaluation Metrics）。在线性模型和光谱比率理论的基础上，我们提出了基于反射光谱的反光消除模型，提出了阴影去除和光照分解、变换算法，图像处理结果见图7。开展了复杂光照下视觉算法的研究，提升了目标识别、目标跟踪、图像分割等视觉任务的性能，结果见图8。
+
+<div align = center><img src='/images/pub_img71.png'></div>\
+图7. 阴影、反光去除、光照变换和光照分离图像处理结果展示
+
+<div align = center><img src='/images/pub_img8.png'></div>\
+图8. 复杂光照下的目标跟踪、识别视觉任务结果
+
+
+
 <!-- Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
@@ -69,7 +89,7 @@ author_profile: true
 1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
 1. Check status by going to the repository settings, in the "GitHub pages" section
 
-Site-wide configuration
+<!-- Site-wide configuration
 ------
 The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
@@ -91,4 +111,4 @@ Example: editing a markdown file for a talk
 
 For more info
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
+More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. --> -->
