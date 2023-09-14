@@ -64,12 +64,11 @@ author_profile: true
 
 
 
-复杂光照下图像处理的理论模型及算法
+2.复杂光照下图像处理的理论模型及算法
 ======
 结合大气物理与成像光学，我们在早期工作中提出了图像中阴影的三色衰减模型（Tricolor Attenuation Model, TAM）和光照线性模型（Illumination Linearity Model），它们分别描述了图像中阴影和非阴影背景之间的三通道衰减以及线性比率关系。在理论上证明了该模型的参数不依赖于物体的反射曲线，即不管场景多复杂，被阴影覆盖的不同物体同其周围的非阴影区域的像素比值是定值，并且证明了该值由太阳角度（天顶角）唯一确定。
 
-<div align = center><img src='/images/pub_img7.png'></div>\
-
+<div align = center><img src='/images/pub_img7.png'></div>
 我们进一步计算了不同太阳角度和不同气象条件下（气溶胶）下的太阳辐射光谱和天空辐射光谱，根据室外阴影只受天空光照射的特点，提出了光谱比率理论（Spectrum Ratio），总结了不同太阳角度和天气下光谱比率的共同点，据此发现了四个新的阴影物理特征，适用于不同天气下的光照处理，揭示了图像中光照变化特征与太阳角度的关系。在我们三色衰减模型、线性模型和光谱比率理论等前述工作的基础上，团队历时2年采集了不同光照条件、不同反照率、不同场景、不同季节、不同时间段、和不同太阳光角度下的3088对有阴影/无阴影图像，建立了首个，也是迄今为止最大、最丰富的光照处理数据库（SRD），首次将光照物理特性（线性模型与光谱比率理论）与深度学习工具相结合，提出了图像去阴影深度网络Deshadownet，并提出了大规模数据库下阴影去除的基本评价准则（Evaluation Metrics）。在线性模型和光谱比率理论的基础上，我们提出了基于反射光谱的反光消除模型，提出了阴影去除和光照分解、变换算法，图像处理结果见图7。开展了复杂光照下视觉算法的研究，提升了目标识别、目标跟踪、图像分割等视觉任务的性能，结果见图8。
 
 <div align = center><img src='/images/pub_img71.png'></div>\
@@ -80,6 +79,22 @@ author_profile: true
 
 代表性论文：\
 相关成果分别发表在图像处理领域权威期刊IEEE Transactions on image processing，2009（第一作者, DOI: 10.1109/TIP.2009.2026682）和视觉旗舰会议 IEEE CVPR，2011（第一作者, DOI: 10.1109/CVPR.2011.5995622）。该工作发表于模式识别著名期刊 Pattern Recognition，2016 （第一作者, DOI:10.1016/j.patcog.2015.09.006）。该工作发表于视觉领域顶级会议IEEE CVPR 2017（通讯作者，spotlight oral paper, DOI: 10.1109/ CVPR.2017.248）。相关成果发表于图像处理领域权威期刊IEEE Transactions on image processing，2017 (通讯作者，DOI: 10.1109/TIP. 2017.2675204)，IEEE Transactions on image processing，2016 (第二作者，DOI: 10.1109/TIP.2016.2642788)，视觉领域顶级会议IEEE CVPR，2017（通讯作者，DOI: 10.1109/ CVPR.2017.248）。代表性论文发表在IEEE Transactions on Image Processing，2022（通讯作者，DOI: 10.1109/TIP.2022.3166638），IEEE Transactions on Multimedia 2021（第二作者，DOI: 10.1109/TMM.2021.3087347），Pattern Recognition 2021（通讯作者，DOI：10.1016/j.patcog.2021.108129）。
+
+Jiandong Tian, Jing Sun, Yandong Tang,“Tricolor Attenuation Model for Shadow Detection”,IEEE Transactions on Image Processing, Vol. 18, No. 10, pp: 2355-2363, 2009.
+
+Jiandong Tian, Yandong Tang, “Linearity of each channel pixel values from a surface in and out of shadows and its applications”, IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR 2011).
+
+Jiandong Tian, Xiaojun Qi, Liangqiong Qu, and Yandong Tang, "New Spectrum Ratio Properties and Features for Shadow Detection", Pattern Recognition, Vol. 51, No. 3, pp: 85–96, 2016.
+
+Liangqiong Qu, Jiandong Tian*, Shengfeng He, Yandong Tang, Rynson Lau, "DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017. (spotlight oral paper)
+
+Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
+
+Zhi Han, Jiandong Tian, Liangqiong Qu, and Yandong Tang, "A New Intrinsic-Lighting Color Space for Daytime Outdoor Images", IEEE Transactions on Image Processing, Vol. 26 No. 2, pp: 1031- 1039, 2017.
+
+Fan Baojie, Tian Jiandong, Peng Yan, Tang Yandong, "Discriminative Siamese Complementary Tracker with Flexible Update", IEEE Transactions on Multimedia,2021.
+
+Fan Baojie, Cong Yang, Tian Jiandong*, Tang Yandong, "Dynamic and reliable subtask tracker with general schatten p-norm regularization", Pattern Recognition,Vol. 120,pp: 108129,2021.
 
 
 <!-- Getting started
@@ -113,4 +128,4 @@ Example: editing a markdown file for a talk
 
 For more info
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. --> -->
+More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. --> 
