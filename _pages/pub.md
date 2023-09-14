@@ -78,6 +78,8 @@ author_profile: true
 <div align = center><img src='/images/pub_img8.png'></div>\
 图8. 复杂光照下的目标跟踪、识别视觉任务结果
 
+代表性论文：\
+相关成果分别发表在图像处理领域权威期刊IEEE Transactions on image processing，2009（第一作者, DOI: 10.1109/TIP.2009.2026682）和视觉旗舰会议 IEEE CVPR，2011（第一作者, DOI: 10.1109/CVPR.2011.5995622）。该工作发表于模式识别著名期刊 Pattern Recognition，2016 （第一作者, DOI:10.1016/j.patcog.2015.09.006）。该工作发表于视觉领域顶级会议IEEE CVPR 2017（通讯作者，spotlight oral paper, DOI: 10.1109/ CVPR.2017.248）。相关成果发表于图像处理领域权威期刊IEEE Transactions on image processing，2017 (通讯作者，DOI: 10.1109/TIP. 2017.2675204)，IEEE Transactions on image processing，2016 (第二作者，DOI: 10.1109/TIP.2016.2642788)，视觉领域顶级会议IEEE CVPR，2017（通讯作者，DOI: 10.1109/ CVPR.2017.248）。代表性论文发表在IEEE Transactions on Image Processing，2022（通讯作者，DOI: 10.1109/TIP.2022.3166638），IEEE Transactions on Multimedia 2021（第二作者，DOI: 10.1109/TMM.2021.3087347），Pattern Recognition 2021（通讯作者，DOI：10.1016/j.patcog.2021.108129）。
 
 
 <!-- Getting started
