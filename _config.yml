@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Tian Jiandong"
+locale                   : "en-ZH"
+title                    : "首页"
 title_separator          : "-"
 name                     : &name "田建东"
 description              : &description "personal description"
@@ -241,7 +241,7 @@ defaults:
       path: ""
       type: talks
     values:
-      layout: talk
+      layout: single
       author_profile: true
       share: true
 
