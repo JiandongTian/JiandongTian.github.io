@@ -48,6 +48,15 @@ author_profile: true
 图6. 不同光照下相机的光谱响应曲线
 <img src='/images/pub_img6.png'>
 
+
+[1] Jiandong Tian, Zhigang Duan, Weihong Ren, Zhi Han, Yandong Tang, "Simple and Effective Calculations about Spectral Power Distributions of Outdoor Light Sources for Computer Vision", Optics Express, Vol. 24, No. 7, pp: 7266-7286, 2016.
+
+[2] Jiandong Tian,Yandong Tang, "Wavelength-sensitive-function controlled reflectance reconstruction", Optics Letters, Vol. 38, No. 15, pp: 2818–2820, 2013.
+
+[3] Denglu Wu, Jiandong Tian*, Yandong Tang, "Optimized basis function for spectral reflectance recovery from tristimulus values", Optical Review, Vol. 21, No. 2, pp: 117–126, 2014.
+
+[4] Denglu Wu，Jiandong Tian*，Bingfeng Li, Yandong Tang,"Recovering Sensor Spectral Sensitivity from Raw Data", Journal of Electronic Imaging Vol. 22, No 2, pp: 023-032, 2013.
+
 <!-- Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
