@@ -4,19 +4,19 @@ main:
     # url: /cv/
   
   - title: "研究方向"
-    url: /teaching/
+    url: /direc/
 
   - title: "理论成果"
     url: /pub/
 
   - title: "应用成果"
-    url: /talks/    
+    url: /applica/    
 
   - title: "科研项目"
-    url: /year-archive/    
+    url: /xm/    
     
   - title: "团队介绍"
-    url: /portfolio/
+    url: /teammembers/
 
 
 
