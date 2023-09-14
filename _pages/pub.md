@@ -69,6 +69,8 @@ author_profile: true
 结合大气物理与成像光学，我们在早期工作中提出了图像中阴影的三色衰减模型（Tricolor Attenuation Model, TAM）和光照线性模型（Illumination Linearity Model），它们分别描述了图像中阴影和非阴影背景之间的三通道衰减以及线性比率关系。在理论上证明了该模型的参数不依赖于物体的反射曲线，即不管场景多复杂，被阴影覆盖的不同物体同其周围的非阴影区域的像素比值是定值，并且证明了该值由太阳角度（天顶角）唯一确定。
 
 <div align = center><img src='/images/pub_img7.png'></div>
+图7. 阴影覆盖的不同物体同其周围的非阴影区域的像素比值是定值，且该值由太阳角度（天顶角）唯一确定
+
 我们进一步计算了不同太阳角度和不同气象条件下（气溶胶）下的太阳辐射光谱和天空辐射光谱，根据室外阴影只受天空光照射的特点，提出了光谱比率理论（Spectrum Ratio），总结了不同太阳角度和天气下光谱比率的共同点，据此发现了四个新的阴影物理特征，适用于不同天气下的光照处理，揭示了图像中光照变化特征与太阳角度的关系。在我们三色衰减模型、线性模型和光谱比率理论等前述工作的基础上，团队历时2年采集了不同光照条件、不同反照率、不同场景、不同季节、不同时间段、和不同太阳光角度下的3088对有阴影/无阴影图像，建立了首个，也是迄今为止最大、最丰富的光照处理数据库（SRD），首次将光照物理特性（线性模型与光谱比率理论）与深度学习工具相结合，提出了图像去阴影深度网络Deshadownet，并提出了大规模数据库下阴影去除的基本评价准则（Evaluation Metrics）。在线性模型和光谱比率理论的基础上，我们提出了基于反射光谱的反光消除模型，提出了阴影去除和光照分解、变换算法，图像处理结果见图7。开展了复杂光照下视觉算法的研究，提升了目标识别、目标跟踪、图像分割等视觉任务的性能，结果见图8。
 
 <div align = center><img src='/images/pub_img71.png'></div>\
@@ -80,21 +82,57 @@ author_profile: true
 代表性论文：\
 <!-- 相关成果分别发表在图像处理领域权威期刊IEEE Transactions on image processing，2009（第一作者, DOI: 10.1109/TIP.2009.2026682）和视觉旗舰会议 IEEE CVPR，2011（第一作者, DOI: 10.1109/CVPR.2011.5995622）。该工作发表于模式识别著名期刊 Pattern Recognition，2016 （第一作者, DOI:10.1016/j.patcog.2015.09.006）。该工作发表于视觉领域顶级会议IEEE CVPR 2017（通讯作者，spotlight oral paper, DOI: 10.1109/ CVPR.2017.248）。相关成果发表于图像处理领域权威期刊IEEE Transactions on image processing，2017 (通讯作者，DOI: 10.1109/TIP. 2017.2675204)，IEEE Transactions on image processing，2016 (第二作者，DOI: 10.1109/TIP.2016.2642788)，视觉领域顶级会议IEEE CVPR，2017（通讯作者，DOI: 10.1109/ CVPR.2017.248）。代表性论文发表在IEEE Transactions on Image Processing，2022（通讯作者，DOI: 10.1109/TIP.2022.3166638），IEEE Transactions on Multimedia 2021（第二作者，DOI: 10.1109/TMM.2021.3087347），Pattern Recognition 2021（通讯作者，DOI：10.1016/j.patcog.2021.108129）。 -->
 
-Jiandong Tian, Jing Sun, Yandong Tang,“Tricolor Attenuation Model for Shadow Detection”,IEEE Transactions on Image Processing, Vol. 18, No. 10, pp: 2355-2363, 2009.
+[5]Jiandong Tian, Jing Sun, Yandong Tang,“Tricolor Attenuation Model for Shadow Detection”,IEEE Transactions on Image Processing, Vol. 18, No. 10, pp: 2355-2363, 2009.
 
-[5]Jiandong Tian, Yandong Tang, “Linearity of each channel pixel values from a surface in and out of shadows and its applications”, IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR 2011).
+[6]Jiandong Tian, Yandong Tang, “Linearity of each channel pixel values from a surface in and out of shadows and its applications”, IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR 2011).
 
-[6]Jiandong Tian, Xiaojun Qi, Liangqiong Qu, and Yandong Tang, "New Spectrum Ratio Properties and Features for Shadow Detection", Pattern Recognition, Vol. 51, No. 3, pp: 85–96, 2016.
+[7]Jiandong Tian, Xiaojun Qi, Liangqiong Qu, and Yandong Tang, "New Spectrum Ratio Properties and Features for Shadow Detection", Pattern Recognition, Vol. 51, No. 3, pp: 85–96, 2016.
 
-[7]Liangqiong Qu, Jiandong Tian*, Shengfeng He, Yandong Tang, Rynson Lau, "DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017. (spotlight oral paper)
+[8]Liangqiong Qu, Jiandong Tian*, Shengfeng He, Yandong Tang, Rynson Lau, "DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017. (spotlight oral paper)
 
-[8]Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
+[9]Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
 
-[9]Zhi Han, Jiandong Tian, Liangqiong Qu, and Yandong Tang, "A New Intrinsic-Lighting Color Space for Daytime Outdoor Images", IEEE Transactions on Image Processing, Vol. 26 No. 2, pp: 1031- 1039, 2017.
+[10]Zhi Han, Jiandong Tian, Liangqiong Qu, and Yandong Tang, "A New Intrinsic-Lighting Color Space for Daytime Outdoor Images", IEEE Transactions on Image Processing, Vol. 26 No. 2, pp: 1031- 1039, 2017.
 
-[10]Fan Baojie, Tian Jiandong, Peng Yan, Tang Yandong, "Discriminative Siamese Complementary Tracker with Flexible Update", IEEE Transactions on Multimedia,2021.
+[11]Fan Baojie, Tian Jiandong, Peng Yan, Tang Yandong, "Discriminative Siamese Complementary Tracker with Flexible Update", IEEE Transactions on Multimedia,2021.
 
-[11]Fan Baojie, Cong Yang, Tian Jiandong*, Tang Yandong, "Dynamic and reliable subtask tracker with general schatten p-norm regularization", Pattern Recognition,Vol. 120,pp: 108129,2021.
+[12]Fan Baojie, Cong Yang, Tian Jiandong*, Tang Yandong, "Dynamic and reliable subtask tracker with general schatten p-norm regularization", Pattern Recognition,Vol. 120,pp: 108129,2021.
+
+3.恶劣天气下图像处理的理论模型及算法
+======
+太阳角度（天顶角）对于从大气物理与成像计算角度理解并处理复杂光照处理至关重要；大气浑浊度（气溶胶）则对于恶劣天气的图像建模与处理具有重要价值。
+在大气散射传输建模和图像去雾研究方面，我们推导了严重散射条件下的近场散射光线传输方程，发现了非均匀散射现象，提出了新的大气光值估计函数。该方法能够恢复出清晰的细节和对比度较高的无雾图像，而且速度非常快，**适于机器人视觉的实时性处理需求**。
+
+<div align = center><img src='/images/pub_img10.png'></div>
+图10. 大气和水下散射去除的结果和对比
+
+在去除雨雪的研究方面，我们提出了一种基于雨雪物理光学模型的积分时间差分求解方程，可同时适用于稀疏和稠密雨雪的建模与消除，**非常适合应用于机器人面临的动态场景和相机移动的情况**，结果对比见图11。
+
+<div align = center><img src='/images/pub_img11.png'></div>
+图11. 雨雪去除对比
+
+代表性论文：\
+
+[13]Jiandong Tian, Zak Murez, Tong Cui, Zhen Zhang, David Kriegman, Ravi Ramamoorthi,"Depth and Image Restoration from Light Field in a Scattering Medium", International Conference on Computer Vision (ICCV) 2017.
+
+[14]Li Pengyue, Tian Jiandong*, Tang Yandong, Wang Guolin, Wu Chengdong, "Deep Retinex Network for Single Image Dehazing", IEEE Transactions on Image Processing,Vol. 30,pp: 1100-1115,2020.
+
+[15]Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
+
+[16]Jiandong Tian, Zhi Han, Weihong Ren, Xiai Chen, Yandong Tang, "Snowflake removal for videos via global and local low-rank decomposition", IEEE Transactions on Multimedia, Vol. 20, No. 10, 2018, pp: 2659-2669.
+
+[17]Pengyue Li, Mengshen Yun, Jiandong Tian*, Yandong Tang, Guolin Wang, Chengdong Wu, "Stacked Dense Networks for Single-Image Snow Removal", Neurocomputing, Vol. 367, No. 20, pp: 152-163, November 2019.
+
+4.成像系统研制
+======
+团队以我们全天候视觉原创性理论为指导，结合先进光学成像技术，研制了多款新型相机和镜头，如下图所示。
+
+<div align = center><img src='/images/pub_img12.png'></div>
+图12.团队研制的新型成像器件
+
+这些硬件系统嵌入我们提出的复杂光照和恶劣天气图像处理算法，软硬件结合发挥最大效能，形成了全天候视觉系统，成像效果如下图所示。
+<div align = center><img src='/images/pub_img13.png'></div>
+图13.团队研制的视觉系统成像结果
 
 
 <!-- Getting started
