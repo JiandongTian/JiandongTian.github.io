@@ -7,7 +7,7 @@
 #   - /pub/
 #   - /pub.html
 layout: archive
-title: "Directions"
+title: 
 permalink: /direc/
 author_profile: true
 ---
@@ -22,6 +22,23 @@ author_profile: true
 
 图像是视觉算法的基础，光照和天气的变化改变了图像的像素值分布（如图1-b和1-c对比所示），这影响了机器人视觉算法的根基，进而影响了机器人的一些基本能力如SLAM、避障导航、视觉伺服、环境理解及作业，给机器人环境感知与行为决策带来了巨大的挑战。目前视觉算法大多是针对质量好、光照条件稳定图像（如图1-c所示）开发的。实际上，在室外复杂的自然光照与恶劣气象条件下，图像质量差别很大（如图1-b所示）。这种情况下，机器人视觉系统的表现往往差强人意，缺乏对环境的自适应能力及鲁棒性，因此针对该问题的图像预处理（图1-b到图1-c）对机器人视觉非常重要。
 
+研究方向：
+======
+
+（1）复杂光照下图像处理的理论模型及算法
+------
+主要研究内容包括基于大气辐射传输计算的图像光照建模、阴影检测与去除、反光去除、光照恒常、光照分解和光照变换等。
+
+（2）恶劣天气下图像处理的理论模型及算法
+------
+主要研究内容主要包括大气吸收和散射传输计算方法、水体散射传输模型、雨雪雾去除算法等
+
+（3）成像系统研制
+------
+主要研究内容包括基于先进光学成像技术的新型相机和镜头研制，ISP优化等
+
+
+<!-- 
 Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
@@ -53,4 +70,4 @@ Example: editing a markdown file for a talk
 
 For more info
 ------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
