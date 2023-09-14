@@ -78,23 +78,23 @@ author_profile: true
 图8. 复杂光照下的目标跟踪、识别视觉任务结果
 
 代表性论文：\
-相关成果分别发表在图像处理领域权威期刊IEEE Transactions on image processing，2009（第一作者, DOI: 10.1109/TIP.2009.2026682）和视觉旗舰会议 IEEE CVPR，2011（第一作者, DOI: 10.1109/CVPR.2011.5995622）。该工作发表于模式识别著名期刊 Pattern Recognition，2016 （第一作者, DOI:10.1016/j.patcog.2015.09.006）。该工作发表于视觉领域顶级会议IEEE CVPR 2017（通讯作者，spotlight oral paper, DOI: 10.1109/ CVPR.2017.248）。相关成果发表于图像处理领域权威期刊IEEE Transactions on image processing，2017 (通讯作者，DOI: 10.1109/TIP. 2017.2675204)，IEEE Transactions on image processing，2016 (第二作者，DOI: 10.1109/TIP.2016.2642788)，视觉领域顶级会议IEEE CVPR，2017（通讯作者，DOI: 10.1109/ CVPR.2017.248）。代表性论文发表在IEEE Transactions on Image Processing，2022（通讯作者，DOI: 10.1109/TIP.2022.3166638），IEEE Transactions on Multimedia 2021（第二作者，DOI: 10.1109/TMM.2021.3087347），Pattern Recognition 2021（通讯作者，DOI：10.1016/j.patcog.2021.108129）。
+<!-- 相关成果分别发表在图像处理领域权威期刊IEEE Transactions on image processing，2009（第一作者, DOI: 10.1109/TIP.2009.2026682）和视觉旗舰会议 IEEE CVPR，2011（第一作者, DOI: 10.1109/CVPR.2011.5995622）。该工作发表于模式识别著名期刊 Pattern Recognition，2016 （第一作者, DOI:10.1016/j.patcog.2015.09.006）。该工作发表于视觉领域顶级会议IEEE CVPR 2017（通讯作者，spotlight oral paper, DOI: 10.1109/ CVPR.2017.248）。相关成果发表于图像处理领域权威期刊IEEE Transactions on image processing，2017 (通讯作者，DOI: 10.1109/TIP. 2017.2675204)，IEEE Transactions on image processing，2016 (第二作者，DOI: 10.1109/TIP.2016.2642788)，视觉领域顶级会议IEEE CVPR，2017（通讯作者，DOI: 10.1109/ CVPR.2017.248）。代表性论文发表在IEEE Transactions on Image Processing，2022（通讯作者，DOI: 10.1109/TIP.2022.3166638），IEEE Transactions on Multimedia 2021（第二作者，DOI: 10.1109/TMM.2021.3087347），Pattern Recognition 2021（通讯作者，DOI：10.1016/j.patcog.2021.108129）。 -->
 
 Jiandong Tian, Jing Sun, Yandong Tang,“Tricolor Attenuation Model for Shadow Detection”,IEEE Transactions on Image Processing, Vol. 18, No. 10, pp: 2355-2363, 2009.
 
-Jiandong Tian, Yandong Tang, “Linearity of each channel pixel values from a surface in and out of shadows and its applications”, IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR 2011).
+[5]Jiandong Tian, Yandong Tang, “Linearity of each channel pixel values from a surface in and out of shadows and its applications”, IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR 2011).
 
-Jiandong Tian, Xiaojun Qi, Liangqiong Qu, and Yandong Tang, "New Spectrum Ratio Properties and Features for Shadow Detection", Pattern Recognition, Vol. 51, No. 3, pp: 85–96, 2016.
+[6]Jiandong Tian, Xiaojun Qi, Liangqiong Qu, and Yandong Tang, "New Spectrum Ratio Properties and Features for Shadow Detection", Pattern Recognition, Vol. 51, No. 3, pp: 85–96, 2016.
 
-Liangqiong Qu, Jiandong Tian*, Shengfeng He, Yandong Tang, Rynson Lau, "DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017. (spotlight oral paper)
+[7]Liangqiong Qu, Jiandong Tian*, Shengfeng He, Yandong Tang, Rynson Lau, "DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017. (spotlight oral paper)
 
-Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
+[8]Weihong Ren, Jiandong Tian*, Zhi Han, Yandong Tang,"Video Desnowing and Deraining Based on Matrix Decomposition", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR), 2017.
 
-Zhi Han, Jiandong Tian, Liangqiong Qu, and Yandong Tang, "A New Intrinsic-Lighting Color Space for Daytime Outdoor Images", IEEE Transactions on Image Processing, Vol. 26 No. 2, pp: 1031- 1039, 2017.
+[9]Zhi Han, Jiandong Tian, Liangqiong Qu, and Yandong Tang, "A New Intrinsic-Lighting Color Space for Daytime Outdoor Images", IEEE Transactions on Image Processing, Vol. 26 No. 2, pp: 1031- 1039, 2017.
 
-Fan Baojie, Tian Jiandong, Peng Yan, Tang Yandong, "Discriminative Siamese Complementary Tracker with Flexible Update", IEEE Transactions on Multimedia,2021.
+[10]Fan Baojie, Tian Jiandong, Peng Yan, Tang Yandong, "Discriminative Siamese Complementary Tracker with Flexible Update", IEEE Transactions on Multimedia,2021.
 
-Fan Baojie, Cong Yang, Tian Jiandong*, Tang Yandong, "Dynamic and reliable subtask tracker with general schatten p-norm regularization", Pattern Recognition,Vol. 120,pp: 108129,2021.
+[11]Fan Baojie, Cong Yang, Tian Jiandong*, Tang Yandong, "Dynamic and reliable subtask tracker with general schatten p-norm regularization", Pattern Recognition,Vol. 120,pp: 108129,2021.
 
 
 <!-- Getting started
