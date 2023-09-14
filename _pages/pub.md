@@ -111,7 +111,7 @@ author_profile: true
 <div align = center><img src='/images/pub_img11.png'></div>
 图11. 雨雪去除对比
 
-代表性论文：\
+代表性论文：
 
 [13]Jiandong Tian, Zak Murez, Tong Cui, Zhen Zhang, David Kriegman, Ravi Ramamoorthi,"Depth and Image Restoration from Light Field in a Scattering Medium", International Conference on Computer Vision (ICCV) 2017.
 
